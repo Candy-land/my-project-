@@ -1,0 +1,68 @@
+{% extends "layout.html" %} {% block content %}
+
+<style>
+	h2{
+		font-family: Helvetica;
+		font-size: 50px;
+		color: #052b6c;
+		text-align: center;
+	}
+
+	h4{
+		font-size: 20px;
+		text-align: right;
+		margin-right: 5%;
+	}
+
+	.content{
+		font-family: Helvetica;
+		font-size: 25px;
+		color: black;
+		text-align: justify;
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+
+	.image{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	.left{
+		margin-top: 2%;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+	.mid{
+		position: absolute;
+		margin-top: -26.5%;
+		margin-left: 30%;
+		margin-right: 0%;
+	}
+	.right{
+		position: absolute;
+		margin-top: -26.5%;
+		margin-left: 60%;
+		margin-right: 0%;
+	}
+</style>
+
+<h2>Top 10 Popular Stations during Weekdays</h2>
+
+<div class="content"> 
+		<iframe width="100%" height="600" frameborder="0" src="{{ url_for('weekday') }}"></iframe>
+		<img class="image" src="{{ url_for('static', filename = 'popular_station_weekday.png') }}" style = "width:600px;">
+		<div class="left"> 
+			<h3>1. Grand Central Station</h3>
+			<img src="https://toddlandryphotography.files.wordpress.com/2010/10/grand-central-interior-1.jpg" style = "width:350px;">
+		</div>
+		<div class="mid"> 
+			<h3>2. Union Square</h3>
+			<img src="http://i.dailymail.co.uk/i/pix/2012/10/09/article-2214636-156993F8000005DC-806_634x421.jpg" style = "width:350px;">
+		</div>
+		<div class="right"> 
+			<h3>3. Chelsea</h3>
+			<img src="http://blog.theverdesian.com/getattachment/blog/November-2014/Chelsea-Market/chelsea-market-expansion-5.jpg/" style = "width:350px;">
+		</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+<!doctype html> 
+<html lang="en">
+<head>
+{% block head %}
+<title>Citibike Data Analysis</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %} </head>
+
+<div class=page>
+
+<style>
+			h2{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+				text-align: center;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+.content{
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+			}
+
+			/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	float:right;
+    display: inline-block;
+    margin-top: 0%;
+    position: absolute;
+    right: 1.5%;
+    top: 3%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+</style>
+<div id="left-align" align="left">
+<a href="{{ url_for('home') }}">
+    <img src="https://d21xlh2maitm24.cloudfront.net/nyc/CitiBike_Logo_p.svg?mtime=20160427183115" height="70px"></a></div>
+
+<div class="dropdown">
+  <a href="{{ url_for('getstarted') }}"><button class="dropbtn">Go To</button></a>
+  <!--
+  <div class="dropdown-content">
+    <a href="{{ url_for('age') }}">Age Distribution</a>
+    <a href="{{ url_for('gender') }}">Gender Distribution</a>
+    <a href="{{ url_for('trips') }}">Trips Distribution</a>
+    <a href="{{ url_for('destinations') }}">Most Popular Destinations</a>
+    <a href="{{ url_for('station') }}">Stations Growth</a>
+    <a href="{{ url_for('heatmap') }}">Heatmap</a>
+    <a href="{{ url_for('carto') }}">Close Look</a>
+  </div>-->
+
+</div>
+{% block content %}
+{% endblock %} </div>
+<div class="gobackup">
+            <a href="#left-align"><h4>Return To Top</h4></a>
+        </div>
+<div class=footer>
+{% block footer %}
+<span></span>
+{% endblock %} </div>

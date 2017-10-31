@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Citi Bike Data Analysis</title>
+	</head>
+
+	<body>
+		<style>
+			h2{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+				text-align: center;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+
+			.content{
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+			}
+		</style>
+
+		<div id="left-align" align="left"><img src="https://d21xlh2maitm24.cloudfront.net/nyc/CitiBike_Logo_p.svg?mtime=20160427183115" height="70px">
+		<h2>Users Gender Distribution</h2>
+		</div>
+
+		<div class="content"> 
+			<p> your text here </p>
+				<img src="gender_bar.png" style="height=100px"> 
+				<br><img src="gender_pie.png" style="height=100px"> 
+		</div>
+
+		<div class="next">
+			<a href="home.html"><h4>Next</h4></a>
+		</div>
+		
+
+
+		 {% block content %}
+{% if session.data_loaded %} <div class="links">
+{% for link in links %}
+<a href="{{link.href}}">{{link.label}}</a><br> {% endfor %}
+<div>
+{% else %}
+<div class="app-error"> Oops! Data wasn't loaded properly</div>
+{% endif %} {% endblock %}
+
+	</body>
+</html>
+

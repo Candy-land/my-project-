@@ -1,0 +1,410 @@
+{% extends "layout2.html" %} {% block content %}
+		<style>
+			h2{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+				text-align: center;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+
+			.content{
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+			}
+
+.button {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:37%;
+  left:4%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button1 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:37%;
+  left:28%;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button2 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:37%;
+  left:52%;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button3 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:37%;
+  left:76%;
+}
+
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button3 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button3:hover span {
+  padding-right: 25px;
+}
+
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button4 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:65%;
+  left:4%;
+}
+
+.button4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button4 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button4:hover span {
+  padding-right: 25px;
+}
+
+.button4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button5 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:65%;
+  left:28%;
+}
+
+.button5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button5 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button5:hover span {
+  padding-right: 25px;
+}
+
+.button5:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button6 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:65%;
+  left:52%;
+}
+
+.button6 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button6 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button6:hover span {
+  padding-right: 25px;
+}
+
+.button6:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button7 {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:65%;
+  left:76%;
+}
+
+.button7 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button7 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button7:hover span {
+  padding-right: 25px;
+}
+
+.button7:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+		</style>
+
+		<h2>Choose Your Analysis</h2>
+
+		<div class="content"> 
+
+<div class="toprow">
+<a href="{{ url_for('gender') }}"> <button class="button"><span>Gender </span></button></a>
+<a href="{{ url_for('age') }}"> <button class="button1"><span>Age </span></button></a>
+<a href="{{ url_for('trips') }}"> <button class="button2"><span>Trips </span></button></a>
+<a href="{{ url_for('station') }}"> <button class="button3"><span>Growth </span></button></a>
+</div>
+
+
+<div class="bottomrow">
+<a href="{{ url_for('destinations') }}"> <button class="button4"><span>Popular Destinations </span></button></a>
+<a href="{{ url_for('heatmap') }}"> <button class="button5"><span>Heatmap </span></button></a>
+<a href="{{ url_for('carto') }}"> <button class="button6"><span>Animation </span></button></a>
+<a href="{{ url_for('references') }}"> <button class="button7"><span>References </span></button></a>
+</div>
+		</div>
+
+
+
+
+
+
+
+
+{% endblock %}
+

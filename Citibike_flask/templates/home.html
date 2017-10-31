@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Citi Bike Data Analysis</title>
+	</head>
+
+	<body>
+
+		<style>
+			h1{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+			}
+      h2{
+        font-family: Helvetica;
+        color: #052b6c;
+      }
+			.pic{
+				
+    			overflow: hidden;
+    			text-align: center;
+    			float:middle;
+    			margin-left: 0%;
+    			margin-right: 0%;
+    			
+			}
+.button {
+  border-radius: 4px;
+  background-color: #0098e4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: middle;
+  position:absolute;
+  top:70%;
+  left:40%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+		</style>
+
+		<div id="center-align" align="center"><img src="https://d21xlh2maitm24.cloudfront.net/nyc/CitiBike_Logo_p.svg?mtime=20160427183115" height="100px">
+		<h1>Behind The Scene</h1>
+    <h2>IEOR 4572 Group 8</h2>
+    <h2>Lyu Wu, Joseph Sudibyo, Sijia Liu, Mario Samalo</h2>
+		</div>
+		<div class="pic">
+		<picture class="picture">
+		<img itemprop="image" srcset="http://www.siegelgale.com/wp-content/uploads/2013/06/Citibike.jpg" align="middle" alt height="900px">
+		</picture>
+		</div>
+
+
+<a href="{{ url_for('getstarted') }}"> <button class="button"><span>Get Started </span></button></a>
+
+
+		 {% block content %}
+{% endblock %}
+
+	</body>
+</html>
+

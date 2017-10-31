@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block content %}
+
+		<style>
+			h2{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+				text-align: center;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+
+			.content{
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+			}
+		</style>
+
+		<h2>Heatmap of Users Destinations</h2>
+
+		<div class="content"> 
+				<iframe width="100%" height="600" frameborder="0" src="{{ url_for('heat_nyc') }}"></iframe>
+		</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,130 @@
+{% extends "layout.html" %} {% block content %}
+		<style>
+			.h2class{
+				font-family: Helvetica;
+				font-size: 70px;
+				color: #052b6c;
+				text-align: center;
+				z-index: 0;
+				opacity: 1;
+				margin-top: -13%;
+				float: middle;
+			}
+
+			h2{
+				color: white;
+				font-size: 85px;
+			}
+			.title{
+				opacity: 0.8;
+				margin-top: 15%;
+				background-color: white;
+				z-index: -1;
+				position: relative;
+				
+				text-align: middle;
+				
+
+			}
+
+			p{
+				font-size: 20px;
+			}
+
+			h3{
+				font-family: Helvetica;
+				color: #052b6c;	
+				font-size: 30px;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+
+			.content{
+				margin-top: 21%;
+				font-family: Helvetica;
+				font-size: 20px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+				background-color: white;
+				opacity: 1;
+			}
+
+			.first-content{
+				border: 1px black;
+				margin-right: 55%;
+				padding-right: 20px;
+				padding-left: 20px;
+				position: relative;
+			}
+
+			.second-content{
+				border: 1px black;
+				margin-left: 55%;
+				padding-right: 20px;
+				padding-left: 20px;
+				position: relative;
+				margin-top: -44.5%;
+			}
+			
+			.third-content{
+				border: 1px black;
+				margin-right: 55%;
+				padding-right: 20px;
+				padding-left: 20px;
+				position: relative;
+				margin-top:5%;
+			}
+
+			.pic{
+				z-index: -1;
+    			overflow: hidden;
+    			text-align: center;
+    			position: absolute;
+    			margin-left: 0%;
+    			margin-right: 0%;
+    			margin-top: 1%;
+			}
+		</style>
+
+		<div class="pic">
+		<picture class="picture">
+		<img itemprop="image" srcset="                        https://d21xlh2maitm24.cloudfront.net/nyc/Expansion-Hero.jpg?mtime=20160729163351" align="middle" alt height="500px">
+		</picture>
+		</div>
+
+		<div class="title">
+		<h2 color="white">Users Gender Distribution</h2>
+		</div>
+		<h2 class="h2class">Users Gender Distribution</h2>
+
+		<div class="content"> 
+				
+				<div class="first-content">
+				<h3>Monthly Gender Distribution</h3>
+				<p><img src="{{ url_for('static',filename='gender_bar.png') }}" height="300px" align="top">
+				<br><li>Male bikers are riding bike more frequently than female bikers. 
+				<br><li>Male bikers are riding bikes more than twice as many as female bikers consistently for each month.
+</p></div>
+
+				<div class="second-content">
+				<h3>Overall Gender Distribution</h3>
+				<p><img src="{{ url_for('static',filename='gender_pie.png') }}" height="300px" align="top">
+				<br><li>The total percentage comparison between male and female bikers in 2015. 
+				<br><li>Male Bikers account for 76.7% of the riders and female bikers account for 23.3% of the riders.
+</p></div>
+				
+				<div class="third-content">
+				<br><h3>Female/Male Ratio</h3>
+				<p><img src="{{ url_for('static',filename='comparison.png') }}" height="320px" align="top">
+				<br><li>The gender difference in Citibike usage is not tending to close up from year 2014 to 2015 in particular in the winter period. 
+</p></div>
+		</div>
+
+{% endblock %}
+

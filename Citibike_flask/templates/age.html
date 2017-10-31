@@ -1,0 +1,116 @@
+{% extends "layout.html" %} {% block content %}
+		<style>
+			.h2class{
+				font-family: Helvetica;
+				font-size: 70px;
+				color: #052b6c;
+				text-align: center;
+				z-index: 0;
+				opacity: 1;
+				margin-top: 5%;
+				float: middle;
+			}
+
+			h2{
+				color: white;
+				font-size: 85px;
+			}
+
+			p{
+				font-size: 20px;
+			}
+
+			h3{
+				font-family: Helvetica;
+				color: #052b6c;	
+				font-size: 30px;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+
+			.content{
+				margin-top: 5%;
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 15%;
+				margin-left: 40%;
+				background-color: transparent;
+				opacity: 1;
+			}
+
+			.first-content{
+				border: 1px black;
+				margin-right: 55%;
+				padding-right: 20px;
+				padding-left: 20px;
+				position: relative;
+			}
+
+			.second-content{
+				border: 1px black;
+				margin-left: 55%;
+				padding-right: 20px;
+				padding-left: 20px;
+				position: relative;
+				margin-top: -51%;
+			}
+			
+			.third-content{
+				border: 1px black;
+				margin-right: 55%;
+				padding-right: 20px;
+				padding-left: 20px;
+				position: relative;
+				margin-top:70px;
+			}
+
+			.pic{
+				margin-top: 15%;
+				margin-left: 5%;
+				z-index: -1;
+    			overflow: hidden;
+    			text-align: center;
+    			position: absolute;
+    			margin-right: 0%;
+    			background-repeat: no-repeat;
+    			
+			}
+
+			.chart{
+				margin-left: 5%;
+			}
+		</style>
+
+
+<div class="pic">
+		<picture class="picture">
+		<img itemprop="image" srcset="https://cdn.vortala.com/childsites/uploads/1616/files/choose-natural.jpg" align="left" alt height="450px">
+		</picture>
+		</div>
+
+		<h2 class="h2class">Users Age Distribution</h2>
+
+
+		
+
+		<div class="content"> 
+				
+				<p text-align="center">
+				<img class="chart" src="{{ url_for('static',filename='age.png') }}" style="height=300px;">
+				<br><li>Mid-20s to early 40s are the most avid users 
+				<br><li>Most users are people who commute to work
+				<br><li>Youngest riders are 16 years old 
+				<br><li>Oldest riders are 86 years old<br>
+</p>
+				
+		</div>
+
+
+{% endblock %}
+

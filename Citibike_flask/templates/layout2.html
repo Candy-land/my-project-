@@ -1,0 +1,45 @@
+<!doctype html> 
+<html lang="en">
+<head>
+{% block head %}
+<title>Citibike Data Analysis</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %} </head>
+
+<div class=page>
+
+<style>
+			h2{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+				text-align: center;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+.content{
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+			}
+
+</style>
+<div id="left-align" align="left">
+<a href="{{ url_for('home') }}">
+    <div id="center-align" align="center"><img src="https://d21xlh2maitm24.cloudfront.net/nyc/CitiBike_Logo_p.svg?mtime=20160427183115" height="100px"></a></div>
+
+
+{% block content %}
+{% endblock %} </div>
+
+<div class=footer>
+{% block footer %}
+<span></span>
+{% endblock %} </div>

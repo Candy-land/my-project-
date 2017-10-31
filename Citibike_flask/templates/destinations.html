@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block content %}
+<style>
+			h2{
+				font-family: Helvetica;
+				font-size: 50px;
+				color: #052b6c;
+				text-align: center;
+			}
+
+			h4{
+				font-size: 20px;
+				text-align: right;
+				margin-right: 5%;
+			}
+
+			.content{
+				font-family: Helvetica;
+				font-size: 25px;
+				color: black;
+				text-align: justify;
+				margin-right: 5%;
+				margin-left: 5%;
+			}
+
+			.formclass{
+				margin-left: 42%;
+				margin-right: 42%;
+				font-size: 44pt;
+			}
+
+			.formstyle{
+			}
+
+
+
+</style>
+		<h2>Top 10 Most Popular Destinations</h2>
+
+		<div class="content"> 
+			<form class="formclass" action="#" method="post" size="100px">
+			<div class="formstyle">
+    		{{ form.attributes }}
+    		{{ form.hidden_tag() }}
+    		<input type="submit"/>
+    	</div>
+  			</form>
+				
+		</div>
+
+{% endblock %}
+
+
